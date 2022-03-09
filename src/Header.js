@@ -1,8 +1,8 @@
 import React from 'react'
 import './Header.css';
 import IMG from './Assets/Images/amazon.png';
-import {FaSearch} from 'react-icons/fa';
-import {MdShoppingBasket} from 'react-icons/md'
+// import {FaSearch} from 'react-icons/fa';
+// import {MdShoppingBasket} from 'react-icons/md';
 
 function Header() {
   return (
@@ -12,7 +12,7 @@ function Header() {
         </img>
         <div className="header__search">
            <input type="text" className="header__searchInput" />
-           <FaSearch className="header__SearchIcon"/> 
+           {/* <FaSearch className="header__SearchIcon"/>  */}
         </div>
         
         <div className="header__nav"> 
@@ -41,7 +41,7 @@ function Header() {
                 </span>
             </div>
             <div className="header__optionBasket">
-                <MdShoppingBasket/>
+                {/* <MdShoppingBasket/> */}
                 <span className="header__optionLineTwo header__basketCount">0</span>
             </div>
         </div>

@@ -1,2 +1,2 @@
-npm install @material-ui/core
+npm install react-icons --save
 rfce // to create component template with es7 snippet plugin 
