@@ -2,22 +2,27 @@ import React from 'react';
 import product1 from './Assets/Images/product1.jpg';
 import './Products.css';
 
-function Products() {
+function Products({title,image,price,rating}) {
   return (
     <div className="product">
         <div className="product__info">
-            <p>ECHOGEAR On-Wall Surge Protector with 6 Pivoting AC Outlets </p>
+            <p>{title}</p>
             <p className="product__price">
               <small>$</small>
-              <strong>19.99</strong>
+              <strong>{price}</strong>
             </p>
             <div className="product__rating">
-              <p>⭐</p>
-              <p>⭐</p>
-              <p>⭐</p>
+              {Array(rating).fill().map((_,i)=>(
+                      <p>⭐</p>
+              ))}
+             
+              
             </div>
-            <img src={product1}/>
-            <button>Add to Basket</button>
+            <img src={image} alt=""/>
+            <div className="add__to__basket__button">
+                <button>Add to Basket</button>
+            </div>
+            
         </div>
     </div>
   )
