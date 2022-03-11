@@ -1,18 +1,19 @@
 import React from 'react'
 import './Header.css';
 import IMG from './Assets/Images/amazon.png';
-// import {FaSearch} from 'react-icons/fa';
-// import {MdShoppingBasket} from 'react-icons/md';
+import {FaSearch} from 'react-icons/fa';
+import {MdShoppingBasket} from 'react-icons/md';
+import {Link} from 'react-router-dom';
 
 function Header() {
   return (
     <div className='header'>
-        <img className="header__logo" src={IMG} alt="">
-
-        </img>
+        <Link to="/">
+        <img className="header__logo" src={IMG} alt=""/>
+        </Link>
         <div className="header__search">
            <input type="text" className="header__searchInput" />
-           {/* <FaSearch className="header__SearchIcon"/>  */}
+           <FaSearch className="header__SearchIcon"/> 
         </div>
         
         <div className="header__nav"> 
@@ -40,10 +41,12 @@ function Header() {
                     Prime 
                 </span>
             </div>
-            <div className="header__optionBasket">
-                {/* <MdShoppingBasket/> */}
-                <span className="header__optionLineTwo header__basketCount">0</span>
-            </div>
+            <Link to="checkout">
+                <div className="header__optionBasket">
+                    <MdShoppingBasket/>
+                    <span className="header__optionLineTwo header__basketCount">0</span>
+                </div>
+            </Link>
         </div>
     </div>
   )

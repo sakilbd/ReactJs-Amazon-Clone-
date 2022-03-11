@@ -1,3 +1,4 @@
 npm install react-icons --save
 npm install react-router-dom@5.2.0
+npm i react-currency-format
 rfce // to create component template with es7 snippet plugin 
